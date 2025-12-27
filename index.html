@@ -45,7 +45,6 @@
   <!-- Navigation Buttons -->
   <div class="nav-buttons">
     <button onclick="showSection('cartSection')">🛒 Cart</button>
-    <button onclick="showSection('prayerSection')">🕌 Prayer Times</button>
   </div>
 
   <!-- Shopping Cart Section -->
@@ -56,18 +55,6 @@
       <button id="add-button" class="center">add to cart</button>
     </div>
     <ul id="shopping-list"></ul>
-  </div>
-
-  <!-- Prayer Times Section (Initially Hidden) -->
-  <div id="prayerSection" style="display: none;">
-    <div class="container">
-      <h1 class="title">مواقيت الصلاة</h1>
-      <p class="date" id="date"></p>
-      <div id="prayerTimes"></div>
-      <button id="notifyBtn">Test Notification</button>
-      <div id="loading">Loading...</div>
-      <div id="error" style="display:none; color:red;">فشل تحميل مواقيت الصلاة.</div>
-    </div>
   </div>
 
   <script src="assets/scripts/app.js" type="module"></script>
