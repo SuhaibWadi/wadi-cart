@@ -14,7 +14,7 @@ body {
   margin: 30px auto;
 }
 
-#input-field {
+.input-field {
   font-family: sans-serif;
   padding: 15px;
   color: #432000;
@@ -27,7 +27,7 @@ body {
   margin-bottom: 10px;
 }
 
-#add-button {
+.add-button {
   color: #fdfdfd;
   background-color: #ac485a;
   font-family: sans-serif;
@@ -38,12 +38,12 @@ body {
   font-size: 20px;
 }
 
-#imgOne {
+.img-cat {
   width: 300px;
   margin: 0 auto;
 }
 
-#shopping-list {
+.shopping-list {
   display: flex;
 
   max-width: 320px;
@@ -68,7 +68,7 @@ li {
   background-color: green;
 }
 
-#add-button:hover {
+.add-button:hover {
   cursor: pointer;
 }
 

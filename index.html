@@ -1,64 +1,128 @@
 <!DOCTYPE html>
-<html lang="en"> 
-  <head>
-    <title>Shopping List</title>
-    
-    <!-- <base href="/abood-cart/"> -->
+<html lang="en">
+
+<head>
+  <title>Shopping List</title>
+
+  <!-- <base href="/abood-cart/"> -->
 
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-<!-- when i took it from favicon the href had a back slash / remove it from all the links you copied -->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="manifest" href="assets/site.webmanifest">
+  <!-- when i took it from favicon the href had a back slash / remove it from all the links you copied -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
 
-    <!-- return this when work local -->
-    <!-- <link rel="stylesheet" type="text/css" href="/assets/styles/app.css" /> -->
-    <!-- this for github -->
-    <!-- <base href="/wadi-cart/"> -->
-    <base href="/wadi-cart/">
+  <!-- return this when work local -->
+  <!-- <link rel="stylesheet" type="text/css" href="/assets/styles/app.css" /> -->
+  <!-- this for github -->
+  <!-- <base href="/wadi-cart/"> -->
+  <!-- <base href="/wadi-cart/"> -->
 
-    <link rel="stylesheet" type="text/css" href="assets/styles/app.css" />
-      <!-- return this when work local -->
-    <!-- <script src="/assets/scripts/app.js" type="module"></script> -->
-   <!-- this for github -->
-    <script src="assets/scripts/app.js" type="module"></script>
-  </head>
+  <link rel="stylesheet" type="text/css" href="assets/styles/app.css" />
+  <!-- return this when work local -->
+  <!-- <script src="/assets/scripts/app.js" type="module"></script> -->
+  <!-- this for github -->
+  <script src="assets/scripts/app.js" type="module"></script>
+</head>
 
-  <body>
-    
-  
-<!-- <div class="container"> -->
-<!-- <img src="/assets/cute cats.jpg" class="center" id="imgOne"> -->
-<!-- <img src="assets/cute-cats.jpg" class="center" id="imgOne">
+<body>
+
+
+  <!-- <div class="container"> -->
+  <!-- <img src="/assets/cute cats.jpg" class="center" id="imgOne"> -->
+  <!-- <img src="assets/cute-cats.jpg" class="center" id="imgOne">
 <input type="text" id="input-field"  placeholder="put your stuff!!"  class="center">
 <button id="add-button" class="center">add to cart</button>
 </div>
 <ul id="shopping-list">
 </ul> -->
+
   <body>
-  <!-- Navigation Buttons -->
-  <div class="nav-buttons">
-    <button onclick="showSection('cartSection')">🛒 Cart</button>
-  </div>
-
-  <!-- Shopping Cart Section -->
-  <div id="cartSection">
-    <div class="container">
-      <img src="assets/cute-cats.jpg" class="center" id="imgOne">
-      <input type="text" id="input-field" placeholder="put your stuff!!" class="center">
-      <button id="add-button" class="center">add to cart</button>
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button onclick="showSection('cartSection')">🛒 Safway</button>
+      <button onclick="showSection('smartSection')">🧼 Smart</button>
+      <button onclick="showSection('vegetablesSection')">🥦 Vegetables</button>
+      <button onclick="showSection('electronicsSection')">💻 Electronics</button>
+      <button onclick="showSection('newsSection')">📰 News</button>
+      <button onclick="showSection('todoSection')">📝 To-Do</button>
+      <button onclick="showSection('eventsSection')">📅 Events</button>
     </div>
-    <ul id="shopping-list"></ul>
-  </div>
 
-  <script src="assets/scripts/app.js" type="module"></script>
+    <!-- Shopping Cart Section (Safway) -->
+    <div id="cartSection">
+      <div class="container">
+        <img src="assets/cute-cats.jpg" class="center img-cat" id="imgOne">
+        <input type="text" id="input-cart" placeholder="put your stuff!!" class="center input-field">
+        <button id="btn-cart" class="center add-button">add to cart</button>
+      </div>
+      <ul id="list-cart" class="shopping-list"></ul>
+    </div>
+
+    <!-- New Category Sections -->
+    <div id="smartSection" style="display: none;">
+      <div class="container">
+        <img src="assets/cute-cats.jpg" class="center img-cat">
+        <input type="text" id="input-smart" placeholder="add smart item..." class="center input-field">
+        <button id="btn-smart" class="center add-button">add to smart</button>
+      </div>
+      <ul id="list-smart" class="shopping-list"></ul>
+    </div>
+
+    <div id="vegetablesSection" style="display: none;">
+      <div class="container">
+        <img src="assets/cute-cats.jpg" class="center img-cat">
+        <input type="text" id="input-vegetables" placeholder="add vegetable..." class="center input-field">
+        <button id="btn-vegetables" class="center add-button">add to vegetables</button>
+      </div>
+      <ul id="list-vegetables" class="shopping-list"></ul>
+    </div>
+
+    <div id="electronicsSection" style="display: none;">
+      <div class="container">
+        <img src="assets/cute-cats.jpg" class="center img-cat">
+        <input type="text" id="input-electronics" placeholder="add gadget..." class="center input-field">
+        <button id="btn-electronics" class="center add-button">add to electronics</button>
+      </div>
+      <ul id="list-electronics" class="shopping-list"></ul>
+    </div>
+
+    <div id="newsSection" style="display: none;">
+      <div class="container">
+        <img src="assets/cute-cats.jpg" class="center img-cat">
+        <input type="text" id="input-news" placeholder="add news item..." class="center input-field">
+        <button id="btn-news" class="center add-button">add to news</button>
+      </div>
+      <ul id="list-news" class="shopping-list"></ul>
+    </div>
+
+    <div id="todoSection" style="display: none;">
+      <div class="container">
+        <img src="assets/cute-cats.jpg" class="center img-cat">
+        <input type="text" id="input-todo" placeholder="add task..." class="center input-field">
+        <button id="btn-todo" class="center add-button">add to todo</button>
+      </div>
+      <ul id="list-todo" class="shopping-list"></ul>
+    </div>
+
+    <div id="eventsSection" style="display: none;">
+      <div class="container">
+        <img src="assets/cute-cats.jpg" class="center img-cat">
+        <input type="text" id="input-events" placeholder="add event..." class="center input-field">
+        <button id="btn-events" class="center add-button">add to events</button>
+      </div>
+      <ul id="list-events" class="shopping-list"></ul>
+    </div>
+
+    <script src="assets/scripts/app.js" type="module"></script>
+  </body>
+
 </body>
 
-  </body>
 </html>
